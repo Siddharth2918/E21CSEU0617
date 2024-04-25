@@ -17,7 +17,7 @@ app.get('/categories/:category/products', async (req, res)=>{
         const {n, minPrice, maxPrice} = req.query;
         axios.get(`http://20.244.56.144/test/companies/AMZ/categories/${category}/products?top=${n}&minPrice=${minPrice}&maxPrice=${maxPrice}`, {
             headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE0MDQ4NTg2LCJpYXQiOjE3MTQwNDgyODYsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImNmMTc4MzQ5LTA0ZmQtNDVkMS04ZDRkLTU4NTczMDg5ZjVkNiIsInN1YiI6ImUyMWNzZXUwNjE3QGJlbm5ldHQuZWR1LmluIn0sImNvbXBhbnlOYW1lIjoiQmVubmV0dFVuaXZlcnNpdHkiLCJjbGllbnRJRCI6ImNmMTc4MzQ5LTA0ZmQtNDVkMS04ZDRkLTU4NTczMDg5ZjVkNiIsImNsaWVudFNlY3JldCI6IkdPU0xTVVlqeWFlZEZ1Y1AiLCJvd25lck5hbWUiOiJTaWRkaGFydGggU3VtYW4gU2luZ2giLCJvd25lckVtYWlsIjoiZTIxY3NldTA2MTdAYmVubmV0dC5lZHUuaW4iLCJyb2xsTm8iOiJFMjFDU0VVMDYxNyJ9.LwX6oJCBGG1zZT20tqJi2t_QuEaiBXXmQJAMzBVWAds"
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE0MDQ5MzU4LCJpYXQiOjE3MTQwNDkwNTgsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImNmMTc4MzQ5LTA0ZmQtNDVkMS04ZDRkLTU4NTczMDg5ZjVkNiIsInN1YiI6ImUyMWNzZXUwNjE3QGJlbm5ldHQuZWR1LmluIn0sImNvbXBhbnlOYW1lIjoiQmVubmV0dFVuaXZlcnNpdHkiLCJjbGllbnRJRCI6ImNmMTc4MzQ5LTA0ZmQtNDVkMS04ZDRkLTU4NTczMDg5ZjVkNiIsImNsaWVudFNlY3JldCI6IkdPU0xTVVlqeWFlZEZ1Y1AiLCJvd25lck5hbWUiOiJTaWRkaGFydGggU3VtYW4gU2luZ2giLCJvd25lckVtYWlsIjoiZTIxY3NldTA2MTdAYmVubmV0dC5lZHUuaW4iLCJyb2xsTm8iOiJFMjFDU0VVMDYxNyJ9.W3vYaDVgluixQMH7ArqMWpRw77OfwEIbO08A_hDlZgg"
             }
         }).then(resp=>{res.status(200).send(resp.data)}).catch(err =>{console.log(err)});
         // setProd(res);
